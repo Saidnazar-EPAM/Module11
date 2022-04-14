@@ -10,7 +10,19 @@ namespace Module11
     {
         public bool IsLeapYear(int year)
         {
-            throw new NotImplementedException();
+            if (year <= 0)
+            {
+                throw new ArgumentOutOfRangeException();
+            }
+
+            if (year % 4 != 0 || (year % 100 == 0 && year % 400 != 0))
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
     }
 }
