@@ -10,7 +10,27 @@ namespace Module11
     {
         public IEnumerable<string> FizzBuzzing()
         {
-            throw new NotImplementedException();
+            for (int i = 1; i < 100; i++)
+            {
+                if (i % 3 == 0 && i % 5 == 0)
+                {
+                    yield return "FizzBuzz";
+                }
+                else
+                if (i % 3 == 0)
+                {
+                    yield return "Fizz";
+                }
+                else
+                if (i % 5 == 0)
+                {
+                    yield return "Buzz";
+                }
+                else
+                {
+                    yield return i.ToString();
+                }
+            }
         }
     }
 }
